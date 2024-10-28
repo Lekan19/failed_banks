@@ -7,9 +7,9 @@ services:
     ports:
       - 3306:3306
     environment:
-      - MARIADB_ROOT_PASSWORD=pass123
-      - MARIADB_USER=user1
-      - MARIADB_PASSWORD=nopass
+      - MARIADB_ROOT_PASSWORD=xxx
+      - MARIADB_USER=xxx
+      - MARIADB_PASSWORD=xxx
     volumes:
       - fdic_db_data:/var/lib/mysql
 
