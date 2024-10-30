@@ -53,24 +53,13 @@ def upload_file(file_path):
     except Exception as e:
         print(f" Error occured during upload to db: {e}")
 
-
-# define the read data from db
-# def read_data():
-#     eng = connect_db()
-#     try:
-#     # Example of using the engine to connect and execute a query
-#         with eng.connect() as connection:
-#             table = "failed_banks"
-#             result = connection.execute(text(f"SELECT * FROM {table}"))
-#             for row in result:
-#                 print(f"Bank name: {row.Bank_name}, City: {row.city}, Closing date: {row.closing}")
-#     except Exception as e:
-#         print(f"Error getting data: {e}")
          
 def connect_db():
     # Define the connection details
-    username = 'user1'
-    password = 'nopass'
+    db_username = os.environ['DB_USERNAME'] 
+    db_pass = os.environ["DB_PASS"]
+    username = db_username
+    password = db_pass 
     host = 'localhost'  # e.g., 'localhost'
     port = 3306         # Default MariaDB port
     database = 'banksDB'
