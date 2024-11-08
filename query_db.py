@@ -82,9 +82,46 @@ def get_state_data(state: str):
 
             return state_list
         
+    
     except Exception as e:
         print(f"Error  getting city data: {e}")
+
+# getting list of failed banks in a year
+def get_year_data(year: int):
+    eng = connect_db()
+    try:
+        with Session(eng) as session:
+            table = "failed_banks"
+            statement = text(f"select * from {table} WHERE YEAR(STR_TO_DATE(closing, '%d-%b-%y')) = :year")
+            
+            # Execute the query with the year parameter
+            results = session.execute(statement,  {"year": year}) 
+
+            year_list = [ 
+                            {
+                                "Bank name": row.Bank_name,
+                                "City": row.city,
+                                "State": row.state,
+                                "Cert": row.cert,
+                                "Acquisition institution": row.Acquiring_institution,
+                                "Closing date": row.closing,
+                                "Fund": row.fund
+                            } for row in results]
+
+            return year_list
+            # # Fetch all rows
+            # rows = results.fetchall()
+            # # Display results
+            # for row in rows:
+            #     print(row)
+                        
+                    
+        
+    except Exception as e:
+        print(f"Error  getting year data: {e}")
+
 
 if __name__ == "main":
     get_all_banks()
     get_state_data()
+    get_year_data()

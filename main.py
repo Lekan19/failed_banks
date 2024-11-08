@@ -1,5 +1,5 @@
 from fastapi import FastAPI
-from query_db import get_all_banks, get_state_data
+from query_db import get_all_banks, get_state_data, get_year_data
 
 app = FastAPI()
 
@@ -22,6 +22,6 @@ async def get_state(state_id: str):
 
 @app.get("/api/{year}")
 async def get_year(year: int):
+    year_data = get_year_data(year)
 
-
-    return {"year of failure": year}
+    return year_data
