@@ -3,7 +3,7 @@ As provided by the FDIC, the CSV file contains a list of failed banks in the Uni
 
 data source: https://catalog.data.gov/dataset/fdic-failed-bank-list
 
-### Tools: FastApi, mariadb, and Docker
+### Tools: FastApi, MariaDB, SQLAlchemy and Docker
 ### Database Setup 
 Deploy the dockerize database 
 ```
