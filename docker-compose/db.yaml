@@ -12,10 +12,15 @@ services:
       - MARIADB_PASSWORD=xxx
     volumes:
       - fdic_db_data:/var/lib/mysql
+    networks:
+      - fdic_db_network
 
 
 volumes:
   fdic_db_data:
+
+networks:
+  fdic_db_network:
 
     
       

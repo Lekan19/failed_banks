@@ -23,14 +23,15 @@ def connect_db():
     # Define the connection details
     db_username = os.environ['DB_USERNAME'] 
     db_pass = os.environ["DB_PASS"]
+    db_host = os.environ["DB_HOST"]
     username = db_username
     password = db_pass 
-    host = 'localhost'  # e.g., 'localhost'
+    #host = 'localhost'  # e.g., 'localhost'
     port = 3306         # Default MariaDB port
     database = 'banksDB'
 
     # creating a db engine
-    engine = create_engine(f"mariadb+pymysql://{username}:{password}@{host}/{database}?charset=utf8mb4")
+    engine = create_engine(f"mariadb+pymysql://{username}:{password}@{db_host}/{database}?charset=utf8mb4")
     #table = "failed_banks"
     print("successfully create an engine")
     return engine
