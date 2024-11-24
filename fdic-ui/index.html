@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>fdic failed bank list</title>
+    <!-- Link to the CSS file -->
+    <link rel="stylesheet" href="css/fdic_ui.css">
+</head>
+<header>
+Failed Banks
+</header>
+<body>
+    <div class="intro">
+        <h1> About </h1>
+        <p> This is a website that shows the failed banks in the USA since 2000</p>
+    </div>
+
+    <div class ="divs">
+        <h2> Show all failed banks</h2>
+        <button class="but" id="allDataButton"> Fetch data</button>
+        <table class="table"> 
+            <thead> 
+            <tr>
+                <th>Bank Name</th>
+                <th>City </th>
+                <th>State </th>
+                <th>Cert</th>
+                <th>Acquring Instituton</th>
+                <th>Closing Date</th>
+                <th>Fund</th>
+            </tr>
+            </thead>
+            <tbody id="alldatabody">
+
+            </tbody>
+            
+        </table>
+
+    
+    </div>
+    <div class="divs">
+        <h1> show failed banks by state </h1>
+        <button class="but" id="stateDataButton"> Fetch data</button>
+        <table class="table">
+            <thead> 
+            <tr>
+                <th>Bank Name</th>
+                <th>City </th>
+                <th>State </th>
+                <th>Cert</th>
+                <th>Acquring Instituton</th>
+                <th>Closing Date</th>
+                <th>Fund</th>
+            </tr>
+            </thead>
+        <tbody id="statedata"></tbody>
+
+        </tbody>
+    </table>
+    </div>
+    <div class="divs">
+        <h1> show failed banks by Year</h1>
+        <button class="but" id="yearDataButton"> Fetch data</button>
+        <table class="table">
+            <thead> 
+                <tr class="table">
+                    <th>Bank Name</th>
+                    <th>City </th>
+                    <th>State </th>
+                    <th>Cert</th>
+                    <th>Acquring Instituton</th>
+                    <th>Closing Date</th>
+                    <th>Fund</th>
+                </tr>
+            </thead>
+        <tbody id="yeardata">
+
+        </tbody>
+    </table>
+    </div>
+
+    <script src="js/script.js"> </script>
+</body>
+</html>

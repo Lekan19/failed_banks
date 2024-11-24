@@ -1,0 +1,26 @@
+/* .intro{
+    border: 2px solid blue;
+    margin-top: 20px;
+} */
+
+.divs{
+    border-bottom: 1px solid;
+    margin-top: 20px;
+}
+
+.but{
+    margin-bottom: 10px;
+}
+.table{
+    margin-bottom: 20px;
+    border-collapse: collapse;
+   
+}
+th, td{
+    
+    border: 1px solid;
+    
+}
+th{
+    background-color: grey;
+}
