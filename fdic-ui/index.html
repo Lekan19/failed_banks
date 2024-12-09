@@ -18,6 +18,7 @@ Failed Banks
     <div class ="divs">
         <h2> Show all failed banks</h2>
         <button class="but" id="allDataButton"> Fetch data</button>
+        <button class="but" id="clearAllDataBtn"> Clear table</button>
         <table class="table"> 
             <thead> 
             <tr>
@@ -39,8 +40,14 @@ Failed Banks
     
     </div>
     <div class="divs">
-        <h1> show failed banks by state </h1>
-        <button class="but" id="stateDataButton"> Fetch data</button>
+        <h1> show failed banks by Year </h1>
+        <form id="searchyearform"> 
+            <label for="yearInput"> Enter year: </label>
+            <input type="number" id="yearInput" placeholder="e.g., 2000">
+            <button class="but" id="stateDataButton"> Fetch data</button>
+        </form>
+        <button class="but" id="clearYearDataBtn"> Clear table</button>
+        
         <table class="table">
             <thead> 
             <tr>
@@ -53,14 +60,20 @@ Failed Banks
                 <th>Fund</th>
             </tr>
             </thead>
-        <tbody id="statedata"></tbody>
+        <tbody id="yeardatabody"></tbody>
 
         </tbody>
     </table>
     </div>
     <div class="divs">
-        <h1> show failed banks by Year</h1>
-        <button class="but" id="yearDataButton"> Fetch data</button>
+        <h1> show failed banks by State</h1>
+        <form id="searchstateform"> 
+            <label for="stateInput"> Enter state acroynm: </label>
+            <input type="text" id="stateInput" placeholder="e.g., IL, MO etc">
+            <button class="but" id="stateDataButton"> Fetch data</button>
+        </form>
+        <button class="but" id="clearStateDataBtn"> Clear table</button>
+        
         <table class="table">
             <thead> 
                 <tr class="table">
@@ -73,7 +86,7 @@ Failed Banks
                     <th>Fund</th>
                 </tr>
             </thead>
-        <tbody id="yeardata">
+        <tbody id="statedatabody">
 
         </tbody>
     </table>
